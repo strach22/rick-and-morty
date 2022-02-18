@@ -1,33 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Contact from "./pages/Contact";
-import Contador from "./pages/Contador";
 
 function App() {
+  const reqApi=()=>{
+    console.log("requaring...")
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Router>
-          <div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contacto</Link>
-              </li>
-              <li>
-                <Link to="/contador">Contador</Link>
-              </li>
-            </ul>
-          </div>
-          <Routes>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/contador" element={<Contador/>}/>
-          </Routes>
-        </Router>
+        <h1 className="title">Rick & Morty</h1>
+        <img
+          src="https://raw.githubusercontent.com/ratasi/rick-morty/master/src/img/rick-morty.png"
+          alt="Rick & Morty"
+          className="img-home"
+        />
+        <button onClick={reqApi} className="btn-search">Buscar Personaje</button>
       </header>
     </div>
   );
