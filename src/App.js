@@ -1,21 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Welcome from "./components/Welcome";
-const name = "Isaac Andres";
+const name = "Isaac";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Welcome message={name}/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
