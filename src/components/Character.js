@@ -1,8 +1,11 @@
 export default function Character(props) {
+  const resetCharacters=()=>{
+    props.setCharacters(null)
+  }
   return (
     <div className="characters">
       <h1>Personajes</h1>
-      <button onClick={console.log(props)} className="btn-search">
+      <button onClick={resetCharacters} className="btn-search">
         Regresar
       </button>
       <div className="container-characters">
@@ -14,7 +17,7 @@ export default function Character(props) {
             <div>
               <h3>{character.name}</h3>
               <h6>
-                {character.status == "Alive" ? (
+                {character.status === "Alive" ? (
                   <>
                     <span className="alive">Vivo</span>
                   </>
@@ -40,7 +43,7 @@ export default function Character(props) {
           </div>
         ))}
       </div>
-      <button onClick={console.log(props)} className="btn-search">
+      <button onClick={resetCharacters} className="btn-search">
         Regresar
       </button>
     </div>

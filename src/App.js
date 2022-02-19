@@ -23,7 +23,7 @@ function App() {
               className="img-home"
             />
             <button onClick={reqApi} className="btn-search">
-              Buscar Personaje
+              Ver Personajes
             </button>
           </>
         )}
