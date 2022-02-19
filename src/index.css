@@ -120,11 +120,6 @@ body {
   color: #9e9e9e;
 }
 
-.back-home {
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 15px;
-}
 
 @media (max-width: 768px) {
   .characters {

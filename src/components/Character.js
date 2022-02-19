@@ -1,7 +1,7 @@
 export default function Character(props) {
-  const resetCharacters=()=>{
-    props.setCharacters(null)
-  }
+  const resetCharacters = () => {
+    props.setCharacters(null);
+  };
   return (
     <div className="characters">
       <h1>Personajes</h1>
@@ -19,11 +19,13 @@ export default function Character(props) {
               <h6>
                 {character.status === "Alive" ? (
                   <>
-                    <span className="alive">Vivo</span>
+                    <span className="alive"></span>
+                    <span>Vivo</span>
                   </>
                 ) : (
                   <>
-                    <span className="dead">Muerto</span>
+                    <span className="dead"></span>
+                    <span>Muerto</span>
                   </>
                 )}
               </h6>
@@ -32,11 +34,11 @@ export default function Character(props) {
                 <span>{character.episode.length}</span>
               </p>
               <p>
-                <span className="text-grey">Gender:</span>
+                <span className="text-grey">Género:</span>
                 <span>{character.gender}</span>
               </p>
               <p>
-                <span className="text-grey">Specie:</span>
+                <span className="text-grey">Especie:</span>
                 <span>{character.species}</span>
               </p>
             </div>
