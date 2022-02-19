@@ -35,11 +35,11 @@ export default function Character(props) {
               </p>
               <p>
                 <span className="text-grey">Género:</span>
-                <span>{character.gender}</span>
+                <span>{character.gender==="Male"?"Hombre":"Mujer"}</span>
               </p>
               <p>
                 <span className="text-grey">Especie:</span>
-                <span>{character.species}</span>
+                <span>{character.species==="Human"?"Humano":"Alien"}</span>
               </p>
             </div>
           </div>
