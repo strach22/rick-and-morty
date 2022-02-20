@@ -16,8 +16,10 @@ function App() {
 
   const nextPage = (com) => {
     if (com === "a") {
-    setPage(info.next)
+      if(info.next!==null) setPage(info.next)
     } else {
+      if(info.prev!==null) setPage(info.prev)
+      
     }
     reqApi()
   };
