@@ -2,11 +2,17 @@ export default function Character(props) {
   const resetCharacters = () => {
     props.setCharacters(null);
   };
+  const bPage = () => {
+    props.nextPage("b");
+  };
+  const aPage = () => {
+    props.nextPage("a");
+  };
   return (
     <div className="characters">
       <h1>Personajes</h1>
       <button onClick={resetCharacters} className="btn-search">
-        Regresar
+        Página principal
       </button>
       <div className="container-characters">
         {props.characters.map((character) => (
@@ -45,8 +51,12 @@ export default function Character(props) {
           </div>
         ))}
       </div>
-      <button onClick={resetCharacters} className="btn-search">
-        Regresar
+      <button onClick={bPage} className="btn-search">
+        Anterior
+      </button>
+      <span> </span>
+      <button onClick={aPage} className="btn-search">
+        Siguiente
       </button>
     </div>
   );
