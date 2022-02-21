@@ -15,6 +15,7 @@ function App() {
   };
 
   const nextPage = async (com) => {
+    window.scrollTo(0, 0)
     if (com === "a") {
       if (info.next !== null) setPage(info.next);
     } else {

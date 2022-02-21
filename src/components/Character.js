@@ -3,11 +3,9 @@ export default function Character(props) {
     props.setCharacters(null);
   };
   const bPage = () => {
-    props.setCharacters(null);
     props.nextPage("b");
   };
   const aPage = () => {
-    props.setCharacters(null);
     props.nextPage("a");
   };
   return (
