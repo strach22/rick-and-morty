@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Character from "./components/Character";
 
 function App() {
@@ -14,15 +14,18 @@ function App() {
     setInfo(characterApi.info);
   };
 
-  const nextPage = (com) => {
+  const nextPage = async (com) => {
     if (com === "a") {
-      if(info.next!==null) setPage(info.next)
+      if (info.next !== null) setPage(info.next);
     } else {
-      if(info.prev!==null) setPage(info.prev)
-      
+      if (info.prev !== null) setPage(info.prev);
     }
-    reqApi()
   };
+
+  useEffect(() => {
+    if(info!==null) reqApi();
+  }, [page]);
+
   return (
     <div className="App">
       <header className="App-header">

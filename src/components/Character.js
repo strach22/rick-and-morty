@@ -3,9 +3,11 @@ export default function Character(props) {
     props.setCharacters(null);
   };
   const bPage = () => {
+    props.setCharacters(null);
     props.nextPage("b");
   };
   const aPage = () => {
+    props.setCharacters(null);
     props.nextPage("a");
   };
   return (
@@ -45,7 +47,7 @@ export default function Character(props) {
               </p>
               <p>
                 <span className="text-grey">Especie: </span>
-                <span>{character.species==="Human"?"Humano":"Alien"}</span>
+                <span>{character.species==="Human"?"Humano":character.species}</span>
               </p>
             </div>
           </div>
